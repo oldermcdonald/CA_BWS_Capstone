@@ -1,0 +1,145 @@
+/* remember to change everything to rem */
+
+/* Universal Styles */
+html {
+  font-family: arial;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  position: fixed;
+}
+
+
+/* Header logo */
+.logo img {
+  height: 32px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  color: grey;
+}
+
+.logo .bold {
+  font-weight: bold;
+  color: black
+}
+
+
+/* Header Navigation */
+.desktop nav {
+  display: flex;
+  padding-right: 24px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-right: 16px;
+}
+
+
+
+/* Header for Mobile */
+header .mobile ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Can't get link icons to spread evenly */
+}
+
+
+
+/* Hide mobile nav on screens greater than 600px */
+@media only screen and (min-width: 600px) {
+  .mobile {
+    display: none;
+  }
+}
+
+
+/* Hide desktop nav on screens less than 600px */
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+}
+
+
+
+
+
+/* Main Section */
+
+.main {
+  padding-top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+}
+
+.main img {
+  width: 60%;
+  padding: 32px 24px;
+}
+
+.container-main {
+  padding-right: 60px;
+}
+
+.container-main h3 {
+  padding: 24px 0px;
+}
+
+.button {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+}
+
+.button p {
+  padding: 8px;
+}
+
+
+/* Main Section for Mobile */
+
+@media only screen and (max-width: 700px){
+  .button {
+    background-color: red;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main img {
+    width:100%;
+    padding: 0px;
+  }
+  .container-main {
+  width: 80%;  /* dont think this is the best way to do this */
+  }
+}
