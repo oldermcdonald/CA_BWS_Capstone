@@ -11,8 +11,21 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.9rem;
+  font-weight: bold;
 }
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+p {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
 
 
 
@@ -64,10 +77,9 @@ nav li {
 
 
 /* Header for Mobile */
-header .mobile ul {
+.mobile ul {
   display: flex;
-  justify-content: space-between;
-  width: 100%; /* Can't get link icons to spread evenly */
+  justify-content: space-between; /* can't get these icons to space-between */
 }
 
 
@@ -128,9 +140,6 @@ header .mobile ul {
 /* Main Section for Mobile */
 
 @media only screen and (max-width: 700px){
-  .button {
-    background-color: red;
-  }
   .main {
     flex-direction: column;
     align-items: center;
@@ -140,6 +149,99 @@ header .mobile ul {
     padding: 0px;
   }
   .container-main {
-  width: 80%;  /* dont think this is the best way to do this */
+  padding: 32px 16px;
+  width: 90%;  /* Need to specify padding width here not width percentage */
   }
 }
+
+
+
+
+
+/* Academy Main Section */
+.academy {
+  display: flex;
+}
+
+.container-academy-main img {
+  width: 100%; /* Is this the best way to acheive image in container? */
+}
+
+.container-academy-main {
+  max-width: 60%; /*changed to max-width to fix alignment issue */
+  padding: 32px 24px;
+}
+
+
+.container-academy-main h2 {
+  padding: 32px 0 24px 0;
+}
+
+
+
+
+/* Academy Events Column */
+
+.container-academy-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 0 0 0;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgrey;
+  background: white; /* Note: change to grey on rollover */
+}
+
+
+
+.event img {
+  width: 100%; /*again this line doesn't seem right */
+}
+
+.event-image-container {
+  width: 35%;
+  padding: 16px;
+}
+
+.event-text {
+  padding: 15px;
+  width: 65%;
+}
+
+.event-text p {
+  padding: 8px 0;
+}
+
+.event-text a {
+  font-size: 0.8rem;
+  color: blue;
+}
+
+
+
+/*Display for mobile */
+@media only screen and (max-width: 700px) {
+  .container-academy-main {
+    display: none;
+  }
+
+  .img-desktop {
+    display: none;
+  }
+
+  .event{
+    flex-direction: column;
+    border: 0;
+  }
+}
+
+
+/*Display for desktop */
+@media only screen and (min-width: 700px) {
+  .img-mobile {
+    display: none;
+  }
