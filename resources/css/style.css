@@ -20,6 +20,10 @@ h3 {
   font-weight: bold;
 }
 
+h4 {
+  font-size: 1.0rem;
+  font-weight: bold;
+}
 
 p {
   font-size: 0.8rem;
@@ -139,7 +143,7 @@ nav li {
 
 /* Main Section for Mobile */
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 600px){
   .main {
     flex-direction: column;
     align-items: center;
@@ -193,16 +197,18 @@ nav li {
   display: flex;
   align-items: center;
   border: 1px solid lightgrey;
-  background: white; /* Note: change to grey on rollover */
 }
 
+.event:hover {
+  background-color: lightgrey
+}
 
 
 .event img {
   width: 100%; /*again this line doesn't seem right */
 }
 
-.event-image-container {
+.event-image-container { /* Guest lecture box has sizing issues */
   width: 35%;
   padding: 16px;
 }
@@ -224,7 +230,7 @@ nav li {
 
 
 /*Display for mobile */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
   .container-academy-main {
     display: none;
   }
@@ -241,7 +247,149 @@ nav li {
 
 
 /*Display for desktop */
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 600px) {
   .img-mobile {
     display: none;
   }
+}
+
+
+
+
+
+
+
+
+/* Courses Section */
+
+.courses {
+  background-color: lightgrey;
+}
+
+.courses h2 {
+  padding: 32px;
+  text-align: center;
+}
+
+.course-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 32px 72px;
+
+}
+
+.course {
+  background-color: white;
+  margin: 32px;
+}
+
+
+.course-image {
+  height: auto;
+}
+
+
+.course-text {
+  padding: 16px;
+}
+
+
+
+
+/* Hide things on mobile version */
+@media only screen and (max-width: 600px) {
+  .courses {
+    background-color: white;
+    border-top: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+  }
+
+  .course-grid {
+    display: inline;
+  }
+
+  .course-image {
+    display: none;
+  }
+
+  .course-text p {
+    display: none;
+    color: red;
+  }
+
+  .course-text {
+    background-color: lightgrey;
+  }
+}
+
+
+
+
+
+
+/* Thesis Section */
+/* Ideally this should use same selectors as academy section */
+.thesis {
+  display: flex;
+}
+
+video {
+  width: 100%;
+}
+
+.container-thesis-main {
+  max-width: 60%;
+  padding: 32px 24px;
+}
+
+
+.container-thesis-main h2 {
+  padding: 32px 0 24px 0;
+}
+
+
+
+
+/* Thesis Column */
+
+.container-thesis-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 0 0 0;
+}
+
+
+/* Hide thesis column on mobile */
+@media only screen and (max-width: 600px) {
+  .container-thesis-col {
+    display: none;
+  }
+  .container-thesis-main h2 , .container-thesis-main p {
+    display: none;
+  }
+  video {
+    width: 100%; /* Video won't go full browser width */
+    margin: auto;
+  }
+}
+
+
+
+
+
+/* Footer Section */
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid grey 1px;
+  padding: 16px 24px;
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .footer-links {
+    display: none;
+  }
+}
