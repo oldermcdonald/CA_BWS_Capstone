@@ -1,4 +1,14 @@
-/* remember to change everything to rem */
+/* GENERAL NOTES & TO DO LIST */
+/*
+- Reformat to rem
+- Mobile header icons not spaced correctly
+- Review all image width: 100% - Not sure this is right
+- Guest lecture event box has scaling issues
+- Video won't go full width on mobile version
+- Refactor code to re-use elements
+*/
+
+
 
 /* Universal Styles */
 html {
@@ -83,7 +93,7 @@ nav li {
 /* Header for Mobile */
 .mobile ul {
   display: flex;
-  justify-content: space-between; /* can't get these icons to space-between */
+  justify-content: space-between;
 }
 
 
@@ -154,7 +164,7 @@ nav li {
   }
   .container-main {
   padding: 32px 16px;
-  width: 90%;  /* Need to specify padding width here not width percentage */
+  width: 90%;
   }
 }
 
@@ -168,11 +178,11 @@ nav li {
 }
 
 .container-academy-main img {
-  width: 100%; /* Is this the best way to acheive image in container? */
+  width: 100%;
 }
 
 .container-academy-main {
-  max-width: 60%; /*changed to max-width to fix alignment issue */
+  max-width: 60%;
   padding: 32px 24px;
 }
 
@@ -205,10 +215,10 @@ nav li {
 
 
 .event img {
-  width: 100%; /*again this line doesn't seem right */
+  width: 100%;
 }
 
-.event-image-container { /* Guest lecture box has sizing issues */
+.event-image-container {
   width: 35%;
   padding: 16px;
 }
@@ -329,7 +339,6 @@ nav li {
 
 
 /* Thesis Section */
-/* Ideally this should use same selectors as academy section */
 .thesis {
   display: flex;
 }
@@ -344,7 +353,7 @@ video {
 }
 
 
-.container-thesis-main h2 {
+.container-thesis-main h4 {
   padding: 32px 0 24px 0;
 }
 
@@ -370,7 +379,7 @@ video {
     display: none;
   }
   video {
-    width: 100%; /* Video won't go full browser width */
+    width: 100%;
     margin: auto;
   }
 }
